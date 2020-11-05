@@ -21,7 +21,7 @@ Please be patient. Inference might take up to 30 seconds due to hardware restric
 ### Setup 
 
 1) Download the model weights [model-f45da743.pt](https://github.com/intel-isl/MiDaS/releases/download/v2/model-f46da743.pt) and place the
-file in the root folder.
+file in the root folder. Rename it as `midas.pt`.
 
 2) Set up dependencies: 
 

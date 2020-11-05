@@ -68,7 +68,7 @@ def run(input_path, output_path, model_path):
         # compute
         with torch.no_grad():
             sample = torch.from_numpy(img_input).to(device).unsqueeze(0)
-            prediction = model.forward(sample)
+            _, prediction = model.forward(sample)
             prediction = (
                 torch.nn.functional.interpolate(
                     prediction.unsqueeze(1),
@@ -95,7 +95,8 @@ if __name__ == "__main__":
     INPUT_PATH = "input"
     OUTPUT_PATH = "output"
     # MODEL_PATH = "model.pt"
-    MODEL_PATH = "model-f46da743.pt"
+    # MODEL_PATH = "model-f46da743.pt"
+    MODEL_PATH = "midas.pt"
 
     # set torch options
     torch.backends.cudnn.enabled = True
