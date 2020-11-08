@@ -68,7 +68,7 @@ def run(input_path, output_path, model_path):
         # compute
         with torch.no_grad():
             sample = torch.from_numpy(img_input).to(device).unsqueeze(0)
-            _, _, _, prediction = model.forward(sample)
+            _, _, _, _, prediction = model.forward(sample)
             prediction = (
                 torch.nn.functional.interpolate(
                     prediction.unsqueeze(1),
