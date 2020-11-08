@@ -73,4 +73,4 @@ class MidasNet(BaseModel):
 
         out = self.scratch.output_conv(path_1)
 
-        return layer_4, torch.squeeze(out, dim=1)
+        return layer_2, layer_3, layer_4, torch.squeeze(out, dim=1)
